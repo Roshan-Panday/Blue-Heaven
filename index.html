@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Heaven Camp | Luxury Camping & Rafting in Rishikesh</title>
+    
+    <meta name="description" content="Experience the thrill of Rishikesh with Blue Heaven Camp. Luxury Swiss tents, river rafting, bungee jumping, and corporate offsites in Shivpuri.">
+    <meta name="theme-color" content="#003366">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. GLOBAL STYLES --- */
+        body { background: #fdfdfd; }
+        .luxury-header { transition: background-color 0.3s ease; }
+        .luxury-header.scrolled { background-color: #003366 !important; box-shadow: 0 4px 20px rgba(0,0,0,0.2); padding: 10px 0; }
+
+        /* --- 2. HERO SECTION --- */
+        .hero-title { font-size: clamp(2.5rem, 5vw, 4.5rem); text-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+        .hero-subtitle { letter-spacing: 4px; font-weight: 700; color: #FFC107; text-transform: uppercase; margin-bottom: 10px; display: block; }
+
+        /* --- 3. WELCOME SECTION --- */
+        .welcome-section { text-align: center; padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        .welcome-title { font-family: 'Playfair Display'; font-size: 2.5rem; color: #003366; margin-bottom: 20px; }
+        .welcome-text { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 40px; }
+        .divider-gold { height: 3px; width: 60px; background: #FFC107; margin: 0 auto 30px; }
+
+        /* --- 4. CARDS LAYOUT --- */
+        .section-bg { background: #f4f6f8; padding: 80px 20px; }
+        .cards-header { display: flex; justify-content: space-between; align-items: end; max-width: 1200px; margin: 0 auto 40px; }
+        .view-all-link { color: #003366; font-weight: bold; text-decoration: none; border-bottom: 2px solid #FFC107; padding-bottom: 2px; transition: 0.3s; }
+        .view-all-link:hover { color: #FFC107; border-color: #003366; }
+
+        /* --- 5. EVENTS & CULTURE SECTION --- */
+        .events-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+            max-width: 1200px; margin: 0 auto;
+        }
+        .event-card {
+            position: relative; height: 350px; border-radius: 12px; overflow: hidden; cursor: pointer; display: block;
+        }
+        .event-card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .event-card:hover img { transform: scale(1.1); }
+        .event-overlay {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); color: white;
+        }
+
+        /* --- 6. BLOG / JOURNAL SECTION --- */
+        .journal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+        a.journal-card { 
+            background: white; border-radius: 8px; overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; 
+            display: block; text-decoration: none; color: inherit;
+        }
+        a.journal-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .j-img { height: 200px; width: 100%; object-fit: cover; }
+        .j-body { padding: 25px; }
+        .j-date { color: #888; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+        .j-title { font-family: 'Playfair Display'; font-size: 1.3rem; margin: 0 0 10px 0; color: #003366; }
+        .j-link { color: #FFC107; font-weight: bold; text-decoration: none; font-size: 0.9rem; }
+
+        /* --- 7. MOBILE STICKY BAR FIX --- */
+        .mobile-sticky-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            display: flex; z-index: 9999; /* Ensure it's on top */
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+        .sticky-btn {
+            flex: 1; padding: 15px; text-align: center; color: white;
+            text-decoration: none; font-weight: bold; font-size: 1.1rem;
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+        }
+        .btn-call { background: #333; }
+        .btn-whatsapp { background: #25D366; }
+
+        @media(min-width: 769px) { .mobile-sticky-bar { display: none; } }
+        @media(max-width: 768px) {
+            .cards-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .hero-title { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <header class="hero-section" style="height: 100vh;">
+        <video autoplay muted loop playsinline id="hero-video" poster="assets/images/gallery/pics/swimming%20pool.jpeg">
+            <source src="assets/images/video/drone view topside angle.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in">
+            <span class="hero-subtitle">Escape to the Himalayas</span>
+            <h1 class="hero-title">Where Luxury Meets<br>Wild Adventure</h1>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Experience Shivpuri's finest riverside camping, thrilling rapids, and unforgettable bonfire nights.
+            </p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="#stays" class="btn-primary" style="background: #FFC107; color: #003366; padding: 15px 40px;">Explore Stays</a>
+                <a href="#rafting" class="btn-primary" style="background: transparent; border: 2px solid white; padding: 15px 40px;">Rafting Trips</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="welcome-section">
+        <div class="divider-gold"></div>
+        <h2 class="welcome-title">Welcome to Blue Heaven</h2>
+        <p class="welcome-text">
+            Nestled in the heart of Shivpuri, surrounded by lush forests and the melody of the Ganges, Blue Heaven is not just a campsite—it's an emotion. Whether you're seeking the adrenaline of crashing through Class IV rapids, the peace of a sunset by the pool, or the joy of dancing under the stars, we curate experiences that linger long after you leave.
+        </p>
+        <img src="assets/images/gallery/pics/sunrise.jpeg" alt="Signature View" style="width: 100%; border-radius: 8px; margin-top: 20px; height: 300px; object-fit: cover;">
+    </section>
+
+    <section id="stays" class="section-bg">
+        <div class="cards-header">
+            <div>
+                <h2 style="font-family:'Playfair Display'; font-size:2rem; color:#003366; margin:0;">Luxury Accommodations</h2>
+                <p style="color:#666; margin:5px 0 0;">Comfort in the lap of nature.</p>
+            </div>
+            <a href="camping.html" class="view-all-link">View All Options <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div id="home-camping-grid" class="cards-container">
+            <article class="deal-card">
+                <a href="package.html?id=swiss-tent" class="card-img" style="display:block">
+                    <span class="card-badge">Best Seller</span>
+                    <img src="assets/images/gallery/pics/cottage1.jpeg" alt="Luxury Swiss Tent">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=swiss-tent"><h3 class="card-title">Luxury Swiss Tent</h3></a>
+                    <div class="feature-pills"><span>Attached Bath</span><span>Air Cooler</span><span>Pool</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹1,199</div>
+                            <div class="price-row-bottom"><span class="mrp">₹1,800</span><span class="discount">33% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=swiss-tent" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=cottage-ac" class="card-img" style="display:block">
+                    <span class="card-badge">Premium</span>
+                    <img src="assets/images/gallery/pics/cottage2.jpeg" alt="AC Cottage">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=cottage-ac"><h3 class="card-title">Premium AC Cottage</h3></a>
+                    <div class="feature-pills"><span>AC</span><span>Private Balcony</span><span>Mountain View</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹1,799</div>
+                            <div class="price-row-bottom"><span class="mrp">₹2,500</span><span class="discount">28% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=cottage-ac" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=camp-alpine" class="card-img" style="display:block">
+                    <span class="card-badge">Raw Nature</span>
+                    <img src="assets/images/gallery/pics/camp.jpeg" alt="Alpine Camp">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=camp-alpine"><h3 class="card-title">Riverside Alpine Camp</h3></a>
+                    <div class="feature-pills"><span>On Sand</span><span>Common Washroom</span><span>Bonfire</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹999</div>
+                            <div class="price-row-bottom"><span class="mrp">₹1,500</span><span class="discount">33% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=camp-alpine" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="rafting" style="padding: 80px 20px;">
+        <div class="cards-header">
+            <div>
+                <h2 style="font-family:'Playfair Display'; font-size:2rem; color:#003366; margin:0;">River Rafting & Adventure</h2>
+                <p style="color:#666; margin:5px 0 0;">Conquer the Ganges rapids.</p>
+            </div>
+            <a href="rafting.html" class="view-all-link">View All Adventures <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div id="home-rafting-grid" class="cards-container">
+            <article class="deal-card">
+                <a href="package.html?id=raft-16km" class="card-img" style="display:block">
+                    <span class="card-badge">Bestseller</span>
+                    <img src="assets/images/gallery/pics/rafting-12km.jpg" alt="16KM Rafting">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=raft-16km"><h3 class="card-title">Shivpuri Down (16KM)</h3></a>
+                    <div class="feature-pills"><span>Grade III</span><span>Roller Coaster</span><span>Cliff Jump</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹599</div>
+                            <div class="price-row-bottom"><span class="mrp">₹1,000</span><span class="discount">40% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=raft-16km" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=raft-26km" class="card-img" style="display:block">
+                    <span class="card-badge">For Pros</span>
+                    <img src="assets/images/gallery/rafting-24km.jpg" alt="26KM Rafting" onerror="this.src='assets/images/gallery/pics/rafting-9km.jpg'">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=raft-26km"><h3 class="card-title">Marine Drive (26KM)</h3></a>
+                    <div class="feature-pills"><span>Grade III+</span><span>Money Maker</span><span>Long Ride</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹1,499</div>
+                            <div class="price-row-bottom"><span class="mrp">₹2,500</span><span class="discount">40% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=raft-26km" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=bungee" class="card-img" style="display:block">
+                    <span class="card-badge">Extreme</span>
+                    <img src="assets/images/gallery/bungee.jpg" alt="Bungee Jumping" onerror="this.src='assets/images/gallery/pics/outdoor%20activity.jpeg'">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=bungee"><h3 class="card-title">Bungee Jump (83 Mtrs)</h3></a>
+                    <div class="feature-pills"><span>India's Highest</span><span>Safety Cert.</span><span>Daredevil</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹3,550</div>
+                            <div class="price-row-bottom"><span class="mrp">₹4,000</span><span class="discount">12% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=bungee" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section style="background: #222; padding: 80px 20px; color: white;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-family:'Playfair Display'; font-size:2.5rem; margin-bottom:10px;">Life at Blue Heaven</h2>
+            <p style="color:#aaa;">More than just a stay. We host memories.</p>
+        </div>
+
+        <div class="events-grid">
+            <a href="gallery.html" class="event-card">
+                <img src="assets/images/gallery/new year celebration/new year.jpeg" alt="New Year Party">
+                <div class="event-overlay">
+                    <h3 style="font-family:'Playfair Display'; font-size:1.5rem; margin:0;">New Year's Eve</h3>
+                    <p style="font-size:0.9rem; opacity:0.8; margin-top:5px;">DJ Nights, Gala Dinner & Fireworks.</p>
+                </div>
+            </a>
+            
+            <a href="gallery.html" class="event-card">
+                <img src="assets/images/gallery/new year celebration/seminar1.jpeg" alt="Corporate Seminar">
+                <div class="event-overlay">
+                    <h3 style="font-family:'Playfair Display'; font-size:1.5rem; margin:0;">Corporate Offsites</h3>
+                    <p style="font-size:0.9rem; opacity:0.8; margin-top:5px;">Open-air seminars & team building.</p>
+                </div>
+            </a>
+
+            <a href="rentals.html" class="event-card">
+                <img src="assets/images/gallery/bike.jpg" alt="Bike Rentals" onerror="this.src='assets/images/gallery/pics/outdoor%20activity.jpeg'">
+                <div class="event-overlay">
+                    <h3 style="font-family:'Playfair Display'; font-size:1.5rem; margin:0;">Bike Expeditions</h3>
+                    <p style="font-size:0.9rem; opacity:0.8; margin-top:5px;">Rent a bike and explore the valley.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section style="padding: 80px 20px; background: white;">
+        <div class="cards-header">
+            <div>
+                <h2 style="font-family:'Playfair Display'; font-size:2rem; color:#003366; margin:0;">Travel Journal</h2>
+                <p style="color:#666; margin:5px 0 0;">Guides & Stories from Rishikesh.</p>
+            </div>
+        </div>
+
+        <div class="journal-grid">
+            <a href="rafting.html" class="journal-card">
+                <img src="assets/images/gallery/pics/rafting-12km.jpg" class="j-img" alt="Rafting Guide">
+                <div class="j-body">
+                    <span class="j-date">TRAVEL GUIDE</span>
+                    <h4 class="j-title">Beginner's Guide to Rafting in Shivpuri</h4>
+                    <span class="j-link">Read More &rarr;</span>
+                </div>
+            </a>
+            
+            <a href="camping.html" class="journal-card">
+                <img src="assets/images/gallery/pics/camp-luxury.jpg" class="j-img" alt="Camping Tips">
+                <div class="j-body">
+                    <span class="j-date">LIFESTYLE</span>
+                    <h4 class="j-title">Why Camping is Better than a Hotel Stay</h4>
+                    <span class="j-link">Read More &rarr;</span>
+                </div>
+            </a>
+            
+            <a href="contact.html" class="journal-card">
+                <img src="assets/images/gallery/new year celebration/seminar9.jpeg" class="j-img" alt="Corporate Event">
+                <div class="j-body">
+                    <span class="j-date">EVENTS</span>
+                    <h4 class="j-title">Hosting the Perfect Corporate Offsite</h4>
+                    <span class="j-link">Read More &rarr;</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <div class="mobile-sticky-bar">
+        <a href="tel:+917302263252" class="sticky-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="https://wa.me/917302263252?text=Hi,%20I%20am%20interested%20in%20Blue%20Heaven%20Camp" target="_blank" class="sticky-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+    </div>
+
+    <div id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBookingModal()">&times;</button>
+            <div class="modal-header"><h3 id="modal-pkg-name">Plan Your Trip</h3><p id="modal-pkg-price">Best Rates Guaranteed</p></div>
+            <div class="modal-body">
+                <div class="form-group"><label>Name</label><input type="text" id="user-name" placeholder="Ex: Amit Kumar"></div>
+                <div class="form-group"><label>Date</label><input type="date" id="checkin-date"></div>
+                <div class="form-group"><label>Guests</label><select id="guest-count"><option value="2">2 Guests</option><option value="4">4 Guests</option><option value="6+">6+ Group</option></select></div>
+                <button class="btn-whatsapp-confirm" onclick="sendWhatsApp()">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/analytics.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

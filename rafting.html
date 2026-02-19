@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Rafting in Rishikesh | 9KM to 36KM Expeditions</title>
+    <meta name="description" content="Book River Rafting in Rishikesh. Choose from 9KM Brahmpuri, 16KM Shivpuri, 26KM Marine Drive, or 36KM Kaudiyala. 100% Safety Gear & Govt Licensed Guides.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. FIXED: BLUE HEADER SCROLL EFFECT --- */
+        .luxury-header {
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+        .luxury-header.scrolled {
+            background-color: #003366 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* --- RAFTING SPECIFIC STYLES --- */
+        .grade-card { background: #f9f9f9; padding: 25px; border-radius: 8px; border-left: 5px solid #ccc; margin-bottom: 20px; transition: 0.3s; }
+        .grade-card:hover { transform: translateX(5px); background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .grade-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 5px; display: flex; align-items: center; gap: 10px; }
+        
+        .list-box { background: white; padding: 30px; border-radius: 12px; border: 1px solid #eee; height: 100%; }
+        .check-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #555; }
+        .check-list i { margin-top: 3px; }
+
+        .faq-grid { display: grid; gap: 15px; }
+        .faq-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; }
+        .faq-head { padding: 15px 20px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fdfdfd; }
+        .faq-body { padding: 0 20px 20px; color: #666; font-size: 14px; display: none; margin-top: 10px; }
+        
+        /* Simple hover effect for FAQs */
+        .faq-card:hover .faq-body { display: block; }
+        .faq-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+        /* --- HERO FIX: FULL HEIGHT (100vh) --- */
+        .hero-section {
+            position: relative; 
+            height: 100vh; /* Changed from 60vh to 100vh */
+            overflow: hidden;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            background: #000;
+        }
+        #hero-bg-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; }
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero-subtitle { color: #FFC107; letter-spacing: 3px; font-weight: bold; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="hero-section">
+        <img src="assets/images/gallery/rafting-16km.jpg" id="hero-bg-img" alt="Rafting in Rishikesh">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Conquer The Ganges</span>
+            <h1 class="hero-title">River Rafting<br>Adventures</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">From Family Fun (9KM) to Extreme Thrills (36KM)</p>
+            <a href="#packages" style="background: #FFC107; color: #003366; padding: 15px 35px; border-radius: 50px; font-weight: bold; text-decoration: none;">View Packages</a>
+        </div>
+    </div>
+
+    <section class="container" style="background: white; padding: 60px 20px;">
+        <div class="section-title">
+            <h2>Know Your Rapids</h2>
+            <p>Which grade is right for you?</p>
+        </div>
+        
+        <div class="grade-card" style="border-color: #27ae60;">
+            <div class="grade-title" style="color: #27ae60;"><i class="fas fa-check-circle"></i> Grade I & II (Beginner)</div>
+            <p>Small waves, clear passages. Safe for non-swimmers, kids (14+), and seniors. Relaxing and fun. (Found in 9KM & 12KM trips).</p>
+        </div>
+
+        <div class="grade-card" style="border-color: #FFA502;">
+            <div class="grade-title" style="color: #FFA502;"><i class="fas fa-exclamation-circle"></i> Grade III (Thrill)</div>
+            <p>Bigger waves that crash into the boat. The boat might rock! Requires paddling. The most popular choice. (Found in 16KM & 26KM trips).</p>
+        </div>
+
+        <div class="grade-card" style="border-color: #e74c3c;">
+            <div class="grade-title" style="color: #e74c3c;"><i class="fas fa-skull-crossbones"></i> Grade IV (Extreme)</div>
+            <p>Massive waves, difficult passages, and strong currents. Chance the boat could flip. Requires fitness. (Found in 36KM trip).</p>
+        </div>
+    </section>
+
+    <section id="packages" class="container" style="background: #f9f9f9; padding: 60px 20px;">
+        <div class="section-title">
+            <h2>Our Rafting Packages</h2>
+            <p>Choose your challenge level.</p>
+        </div>
+        
+        <div id="room-grid" class="cards-container">
+            
+            <article class="deal-card">
+                <a href="package.html?id=raft-9km" class="card-img" style="display:block">
+                    <span class="card-badge">Beginner</span>
+                    <img src="assets/images/gallery/rafting-16km.jpg" alt="Rafting 9KM">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=raft-9km"><h3 class="card-title">Brahmpuri (9KM)</h3></a>
+                    <div class="feature-pills"><span>Grade I & II</span><span>Mild Waves</span><span>Kids Friendly</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹499</div>
+                            <div class="price-row-bottom"><span class="mrp">₹800</span><span class="discount">37% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=raft-9km" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=raft-16km" class="card-img" style="display:block">
+                    <span class="card-badge">Most Popular</span>
+                    <img src="assets/images/gallery/rafting-16km.jpg" alt="Rafting 16KM">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=raft-16km"><h3 class="card-title">Shivpuri (16KM)</h3></a>
+                    <div class="feature-pills"><span>Roller Coaster</span><span>Golf Course</span><span>Cliff Jump</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹599</div>
+                            <div class="price-row-bottom"><span class="mrp">₹1,000</span><span class="discount">40% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=raft-16km" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=raft-26km" class="card-img" style="display:block">
+                    <span class="card-badge">Longest</span>
+                    <img src="assets/images/gallery/rafting-16km.jpg" alt="Rafting 26KM">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=raft-26km"><h3 class="card-title">Marine Drive (26KM)</h3></a>
+                    <div class="feature-pills"><span>Grade III+</span><span>Body Surfing</span><span>Max Time</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹1,499</div>
+                            <div class="price-row-bottom"><span class="mrp">₹2,500</span><span class="discount">40% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=raft-26km" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=raft-36km" class="card-img" style="display:block">
+                    <span class="card-badge">Extreme</span>
+                    <img src="assets/images/gallery/rafting-16km.jpg" alt="Rafting 36KM">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=raft-36km"><h3 class="card-title">Kaudiyala (36KM)</h3></a>
+                    <div class="feature-pills"><span>Grade IV</span><span>The Wall</span><span>Experts Only</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹2,499</div>
+                            <div class="price-row-bottom"><span class="mrp">₹3,500</span><span class="discount">28% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=raft-36km" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="container" style="background: white; padding: 60px 20px;">
+        <h3 style="text-align:center; font-family:'Playfair Display'; font-size:2rem; color:#003366; margin-bottom:40px;">Famous Rapids & Info</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            
+            <div class="list-box">
+                <h4 style="margin-bottom:20px; color:#003366;">🌊 You Will Face:</h4>
+                <ul class="check-list">
+                    <li><i class="fas fa-water" style="color:#003366;"></i> <strong>Three Blind Mice (III):</strong> Three waves back to back.</li>
+                    <li><i class="fas fa-water" style="color:#003366;"></i> <strong>Roller Coaster (III+):</strong> Huge wave train tossing the raft.</li>
+                    <li><i class="fas fa-water" style="color:#003366;"></i> <strong>Golf Course (III+):</strong> Long, challenging test of stamina.</li>
+                    <li><i class="fas fa-water" style="color:#003366;"></i> <strong>The Wall (IV):</strong> Massive wall of water (36KM only).</li>
+                </ul>
+            </div>
+
+            <div class="list-box">
+                <h4 style="margin-bottom:20px; color:#27ae60;">✅ Inclusions</h4>
+                <ul class="check-list">
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Transport from Office to Start Point</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Certified Guide & Safety Kayaker</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> All Gear (Helmet, Jacket, Paddle)</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Dry Bag for phones/keys</li>
+                </ul>
+            </div>
+
+            <div class="list-box" style="background: #212121; border:none;">
+                <h4 style="margin-bottom:20px; color:#FFC107;">🎒 Things to Carry</h4>
+                <ul class="check-list">
+                    <li style="color:#ccc;"><i class="fas fa-tshirt" style="color:#FFC107;"></i> Quick-drying shorts/t-shirt (No Sarees)</li>
+                    <li style="color:#ccc;"><i class="fas fa-shoe-prints" style="color:#FFC107;"></i> Sandals with straps or sneakers</li>
+                    <li style="color:#ccc;"><i class="fas fa-glasses" style="color:#FFC107;"></i> Sunglasses with strap</li>
+                    <li style="color:#ccc;"><i class="fas fa-medkit" style="color:#FFC107;"></i> Personal medication</li>
+                    <li style="color:#ccc;"><i class="fas fa-suitcase" style="color:#FFC107;"></i> Change of clothes & towel</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container" style="background: #f9f9f9; padding: 60px 20px;">
+        <div class="section-title"><h2>Rafting FAQs</h2></div>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-swimmer"></i> Can non-swimmers do rafting?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">Yes! You get a high-buoyancy Life Jacket that keeps you afloat. Non-swimmers can safely do Grade I, II, and III.</div>
+            </div>
+            <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-child"></i> Minimum Age?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">14 years for 9KM. For 16KM and above, we recommend 16+ years.</div>
+            </div>
+            <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-cloud-rain"></i> Is it open in Monsoon?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">No, rafting is closed from July to mid-September due to high water levels.</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <div class="mobile-sticky-bar">
+        <a href="tel:+917302263252" class="sticky-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="https://wa.me/917302263252?text=Hi,%20I%20am%20interested%20in%20Blue%20Heaven%20Camp" target="_blank" class="sticky-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+    </div>
+
+    <div id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBookingModal()">&times;</button>
+            <div class="modal-header"><h3 id="modal-pkg-name">Booking Inquiry</h3><p id="modal-pkg-price">Best Rates Online</p></div>
+            <div class="modal-body">
+                <div class="form-group"><label>Name</label><input type="text" id="user-name"></div>
+                <div class="form-group"><label>Date</label><input type="date" id="checkin-date"></div>
+                <div class="form-group"><label>Guests</label><select id="guest-count"><option>2</option><option>4</option><option>6+</option></select></div>
+                <button class="btn-whatsapp-confirm" onclick="sendWhatsApp()">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

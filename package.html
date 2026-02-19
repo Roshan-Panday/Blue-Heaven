@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Package Details | Blue Heaven Camp</title>
+    
+    <meta name="description" content="Detailed itinerary and pricing for Blue Heaven Camp packages.">
+    <meta name="theme-color" content="#003366">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { background: #f9f9f9; margin: 0; }
+
+        /* --- 1. HEADER OVERLAY FIX (Transparent & Floating) --- */
+        .luxury-header {
+            position: absolute; /* Floats ON TOP of the hero image */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: transparent; /* Initially transparent */
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+        
+        /* Blue background ONLY when scrolling */
+        .luxury-header.scrolled {
+            position: fixed; /* Sticks to top when scrolling */
+            background-color: #003366 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* --- 2. FULL SCREEN HERO SECTION (100vh) --- */
+        .hero-section {
+            height: 100vh; /* Forces Full Screen Height */
+            width: 100%;
+            position: relative;
+            background: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* No margins, starts at pixel 0 */
+        }
+
+        #pkg-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.7; /* Slight darken for text readability */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.8));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            max-width: 1000px;
+            margin-top: 60px; /* Slight push to clear the header area */
+        }
+
+        #pkg-badge {
+            background: #FFC107;
+            color: #003366;
+            padding: 8px 20px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        #pkg-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            margin: 20px 0;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        /* Pricing Display */
+        .price-container { 
+            margin-top: 15px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px; 
+        }
+        .final-price { 
+            font-size: 2.5rem; 
+            font-weight: bold; 
+            color: #FFC107; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+        .old-mrp { 
+            font-size: 1.5rem; 
+            text-decoration: line-through; 
+            color: #bbb; 
+        }
+        .discount-badge { 
+            background: #27ae60; 
+            color: white; 
+            padding: 5px 12px; 
+            border-radius: 50px; 
+            font-size: 0.9rem; 
+            font-weight: bold; 
+        }
+
+        /* --- LAYOUT GRID --- */
+        .pkg-grid { 
+            display: grid; 
+            grid-template-columns: 2fr 1fr; 
+            gap: 40px; 
+            padding-top: 60px; 
+            padding-bottom: 80px; 
+        }
+        .content-box { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05); 
+            margin-bottom: 30px; 
+        }
+        .section-head { 
+            font-family: 'Playfair Display'; 
+            color: #003366; 
+            margin-bottom: 25px; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 15px; 
+        }
+        
+        .booking-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            border-top: 6px solid #003366;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 100px; 
+        }
+
+        @media (max-width: 900px) {
+            .pkg-grid { grid-template-columns: 1fr; }
+            .hero-section { height: 80vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="hero-section">
+        <img id="pkg-bg" src="" alt="Package View" onerror="this.src='assets/images/gallery/rafting-16km.jpg'">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span id="pkg-badge">PREMIUM</span>
+            <h1 id="pkg-title">Loading Package...</h1>
+            
+            <div class="price-container">
+                <span id="pkg-price-final" class="final-price"></span>
+                <span id="pkg-mrp" class="old-mrp"></span>
+                <span id="pkg-discount-tag" class="discount-badge"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pkg-grid">
+        <div class="pkg-info">
+            <div class="content-box">
+                <h2 class="section-head">Overview</h2>
+                <p id="pkg-desc" style="line-height: 1.8; color: #555; font-size: 1.1rem;"></p>
+                
+                <h3 style="margin-top: 35px; color: #003366;">Experience Highlights</h3>
+                <ul id="pkg-highlights" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
+                    </ul>
+            </div>
+
+            <div class="content-box">
+                <h2 class="section-head">Itinerary</h2>
+                <div id="pkg-timeline">
+                    </div>
+            </div>
+        </div>
+
+        <aside>
+            <div class="booking-card">
+                <h3 style="margin-bottom: 5px;">Reserve Your Spot</h3>
+                <p style="color: #888; font-size: 14px; margin-bottom: 25px;">Direct Booking - Best Rates Guaranteed</p>
+                <div style="margin-bottom: 25px;">
+                    <span id="side-price" style="font-size: 2.5rem; font-weight: 800; color: #003366;"></span>
+                    <span style="color: #999;">/ person</span>
+                </div>
+                <button onclick="openBookingModal()" class="btn-wa-dynamic" style="width: 100%; padding: 18px; background: #FFC107; border: none; font-weight: 900; border-radius: 6px; cursor: pointer; font-size: 1.1rem; color: #003366; box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);">
+                    BOOK THIS PACKAGE
+                </button>
+                <p style="text-align: center; margin-top: 20px; font-size: 14px; font-weight: bold; color: #003366;">
+                    <i class="fab fa-whatsapp"></i> Instant Confirmation on WhatsApp
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <div class="mobile-sticky-bar">
+        <a id="sticky-call" href="#" class="sticky-btn btn-call btn-call-dynamic"><i class="fas fa-phone-alt"></i> Call</a>
+        <a id="sticky-wa" href="#" class="sticky-btn btn-whatsapp btn-wa-dynamic"><i class="fab fa-whatsapp"></i> Chat</a>
+    </div>
+
+    <div id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBookingModal()">&times;</button>
+            <div class="modal-header"><h3 id="modal-pkg-name">Booking</h3><p id="modal-pkg-price">Best Rates</p></div>
+            <div class="modal-body">
+                <div class="form-group"><label>Name</label><input type="text" id="user-name"></div>
+                <div class="form-group"><label>Date</label><input type="date" id="checkin-date"></div>
+                <div class="form-group"><label>Guests</label><select id="guest-count"><option>2</option><option>4</option><option>6+</option></select></div>
+                <button class="btn-whatsapp-confirm" onclick="sendWhatsApp()">Confirm via WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

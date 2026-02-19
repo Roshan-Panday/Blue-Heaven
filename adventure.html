@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bungee Jumping & Adventures in Rishikesh</title>
+    <meta name="description" content="Dare to jump from India's highest fixed platform (83 Mtrs). Book Bungee, Giant Swing & Flying Fox in Rishikesh with 100% safety record.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. FIXED: BLUE HEADER SCROLL EFFECT --- */
+        .luxury-header {
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+        .luxury-header.scrolled {
+            background-color: #003366 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* --- HERO FIX: FULL HEIGHT (100vh) --- */
+        .hero-section {
+            position: relative; 
+            height: 100vh;
+            overflow: hidden;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            background: #000;
+        }
+        #hero-bg-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; }
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero-subtitle { color: #FFC107; letter-spacing: 3px; font-weight: bold; text-transform: uppercase; }
+
+        /* --- ADVENTURE SPECIFIC STYLES --- */
+        .list-box { background: white; padding: 30px; border-radius: 12px; border: 1px solid #eee; height: 100%; }
+        .check-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #555; }
+        
+        .faq-grid { display: grid; gap: 15px; }
+        .faq-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; transition: 0.3s; }
+        .faq-head { padding: 15px 20px; font-weight: bold; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: #fdfdfd; }
+        .faq-body { padding: 0 20px 20px; color: #666; font-size: 14px; display: none; margin-top: 10px; }
+        .faq-card:hover .faq-body { display: block; }
+        .faq-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="hero-section">
+        <img src="assets/images/gallery/bungee.jpg" id="hero-bg-img" alt="Bungee Jumping Rishikesh" onerror="this.src='assets/images/gallery/rafting-16km.jpg'">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Dare To Jump?</span>
+            <h1 class="hero-title">Extreme Adventures<br>& Bungee</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">India's Highest Bungee Platform (83 Mtrs)</p>
+            <a href="#packages" style="background: #FFC107; color: #003366; padding: 15px 35px; border-radius: 50px; font-weight: bold; text-decoration: none;">View Activities</a>
+        </div>
+    </div>
+
+    <section class="container" style="background: white; padding: 60px 20px;">
+        <div class="section-title">
+            <h2>Safety & Adrenaline</h2>
+            <p>100% Safety Record with International Standards</p>
+        </div>
+        <p style="text-align:center; max-width:800px; margin:0 auto; color:#666; font-size:1.1rem; line-height:1.8;">
+            83 Meters of pure gravity. It’s scary, but that’s the point. This is not just an adventure; it's a test of courage. Operated by experts using <strong>Australian & New Zealand safety standards</strong>, we have a 100% safety record. Jump with confidence.
+        </p>
+    </section>
+
+    <section id="packages" class="container" style="background: #f9f9f9; padding: 60px 20px;">
+        <div class="section-title">
+            <h2>Choose Your Thrill</h2>
+            <p>Bungee, Swing, or Flying Fox?</p>
+        </div>
+        
+        <div id="room-grid" class="cards-container">
+            
+            <article class="deal-card">
+                <a href="package.html?id=bungee" class="card-img" style="display:block">
+                    <span class="card-badge" style="background:#e74c3c;">Extreme</span>
+                    <img src="assets/images/gallery/bungee.jpg" alt="Bungee Jumping" onerror="this.src='assets/images/gallery/room1.jpeg'">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=bungee"><h3 class="card-title">Bungee Jump (83M)</h3></a>
+                    <div class="feature-pills"><span>Highest Jump</span><span>Age 12+</span><span>Certificate</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹3,550</div>
+                            <div class="price-row-bottom"><span class="mrp">₹4,000</span><span class="discount">10% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=bungee" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=reverse-bungee" class="card-img" style="display:block">
+                    <span class="card-badge">Fun</span>
+                    <img src="assets/images/gallery/reverse-bungee.jpg" alt="Reverse Bungee" onerror="this.src='assets/images/gallery/room1.jpeg'">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=reverse-bungee"><h3 class="card-title">Reverse Bungee</h3></a>
+                    <div class="feature-pills"><span>Catapult Shot</span><span>Rocket Speed</span><span>3G Force</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹1,200</div>
+                            <div class="price-row-bottom"><span class="mrp">₹1,500</span><span class="discount">20% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=reverse-bungee" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=giant-swing" class="card-img" style="display:block">
+                    <span class="card-badge">Duo</span>
+                    <img src="assets/images/gallery/giant-swing.jpg" alt="Giant Swing" onerror="this.src='assets/images/gallery/room1.jpeg'">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=giant-swing"><h3 class="card-title">Giant Swing</h3></a>
+                    <div class="feature-pills"><span>Pendulum</span><span>Solo/Double</span><span>Deep Valley</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹3,550</div>
+                            <div class="price-row-bottom"><span class="mrp">₹4,000</span><span class="discount">10% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=giant-swing" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="deal-card">
+                <a href="package.html?id=flying-fox" class="card-img" style="display:block">
+                    <span class="card-badge">Speed</span>
+                    <img src="assets/images/gallery/flying-fox.jpg" alt="Flying Fox" onerror="this.src='assets/images/gallery/room1.jpeg'">
+                </a>
+                <div class="card-body">
+                    <a href="package.html?id=flying-fox"><h3 class="card-title">Flying Fox (1KM)</h3></a>
+                    <div class="feature-pills"><span>140 Kmph</span><span>Longest Zipline</span><span>Super View</span></div>
+                    <div class="card-footer">
+                        <div class="price-block">
+                            <div class="price">₹1,800</div>
+                            <div class="price-row-bottom"><span class="mrp">₹2,500</span><span class="discount">28% OFF</span></div>
+                        </div>
+                        <a href="package.html?id=flying-fox" class="btn-book-card">View</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="container" style="background: white; padding: 60px 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            
+            <div class="list-box">
+                <h3 style="color:#27ae60; margin-bottom:20px; border-bottom: 2px solid #eee; padding-bottom:10px;">✅ Inclusions</h3>
+                <ul class="check-list">
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> The Activity (Jump/Fly)</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Safety Briefing & Gear</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Expert Jump Masters</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Daredevil Certificate</li>
+                    <li><i class="fas fa-check" style="color:#27ae60;"></i> Water Bottle</li>
+                </ul>
+            </div>
+
+            <div class="list-box">
+                <h3 style="color:#e74c3c; margin-bottom:20px; border-bottom: 2px solid #eee; padding-bottom:10px;">❌ Exclusions</h3>
+                <ul class="check-list">
+                    <li><i class="fas fa-times" style="color:#e74c3c;"></i> <strong>Video & Photos</strong> (Extra Charge)</li>
+                    <li><i class="fas fa-times" style="color:#e74c3c;"></i> Entry Ticket (Approx ₹100)</li>
+                    <li><i class="fas fa-times" style="color:#e74c3c;"></i> Transport to Jump Zone</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container" style="background: #f9f9f9; padding: 60px 20px;">
+        <div class="section-title"><h2>Bungee FAQs</h2></div>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-hard-hat"></i> Is it safe?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">Yes, we use imported equipment and follow New Zealand safety standards. Our crew is highly trained. 100% safety record.</div>
+            </div>
+            <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-weight"></i> What is the weight limit?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">Minimum weight is 40kg, Maximum is 110kg. This is strictly enforced for safety.</div>
+            </div>
+            <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-utensils"></i> Can I eat before jumping?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">Avoid heavy meals right before the jump. A light snack 2 hours prior is fine. Do not jump on an empty stomach if you have low BP.</div>
+            </div>
+             <div class="faq-card">
+                <div class="faq-head"><span><i class="fas fa-video"></i> Do I get a video?</span> <i class="fas fa-plus" style="font-size:12px;"></i></div>
+                <div class="faq-body">Yes, HD video and photos are available for an extra charge. You can view them after your jump and decide to buy.</div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <div class="mobile-sticky-bar">
+    <a href="tel:+917302263252" class="sticky-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+    <a href="https://wa.me/917302263252?text=Hi,%20I%20am%20interested%20in%20Blue%20Heaven%20Camp" target="_blank" class="sticky-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+</div>
+
+    <div id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBookingModal()">&times;</button>
+            <div class="modal-header"><h3 id="modal-pkg-name">Booking Inquiry</h3><p id="modal-pkg-price">Best Rates Online</p></div>
+            <div class="modal-body">
+                <div class="form-group"><label>Name</label><input type="text" id="user-name"></div>
+                <div class="form-group"><label>Date</label><input type="date" id="checkin-date"></div>
+                <div class="form-group"><label>Guests</label><select id="guest-count"><option>1</option><option>2</option><option>4+</option></select></div>
+                <button class="btn-whatsapp-confirm" onclick="sendWhatsApp()">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/analytics.js"></script>
+</body>
+</html>

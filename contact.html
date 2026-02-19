@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Blue Heaven Camp Rishikesh</title>
+    <meta name="description" content="Contact Blue Heaven Camp in Shivpuri, Rishikesh. Phone: +91 89547 79410. Address: Ripply Adventures, Badrinath Road.">
+    <meta name="theme-color" content="#003366">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { background: #f9f9f9; margin: 0; }
+
+        /* --- 1. HEADER OVERLAY FIX (Transparent on Top) --- */
+        .luxury-header {
+            position: absolute; /* Floats ON TOP of hero image */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background: transparent;
+            transition: background-color 0.3s ease, padding 0.3s ease;
+        }
+        .luxury-header.scrolled {
+            position: fixed; /* Sticks when scrolling */
+            background-color: #003366 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        /* --- 2. HERO SECTION (FULL SCREEN 100vh) --- */
+        .hero-section {
+            position: relative; 
+            height: 100vh; /* CHANGED TO FULL HEIGHT */
+            width: 100%;
+            overflow: hidden;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            background: #000;
+        }
+        #hero-bg-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+        }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; }
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero-subtitle { color: #FFC107; letter-spacing: 3px; font-weight: bold; text-transform: uppercase; }
+
+        /* --- 3. CONTACT CARDS (Overlapping Effect) --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: -80px; /* Pulls cards UP over the hero image */
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+        .contact-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid #FFC107;
+        }
+        .contact-icon { font-size: 2.5rem; color: #003366; margin-bottom: 20px; }
+        .contact-card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: #333; }
+        .contact-card p, .contact-card a { color: #666; font-size: 1rem; line-height: 1.6; text-decoration: none; display: block; }
+        .contact-card a:hover { color: #FFC107; }
+
+        /* --- 4. FORM & MAP SECTION --- */
+        .map-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            margin-top: 80px;
+            background: white;
+        }
+        .form-container { padding: 60px; background: #f9f9f9; }
+        .form-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: #003366; margin-bottom: 30px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #555; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-family: 'Lato', sans-serif;
+        }
+        .form-group textarea { height: 120px; resize: vertical; }
+        
+        .map-container iframe { width: 100%; height: 100%; min-height: 550px; border: 0; }
+
+        @media (max-width: 768px) {
+            .map-section { grid-template-columns: 1fr; }
+            .form-container { padding: 40px 20px; }
+            .map-container iframe { height: 350px; min-height: auto; }
+            .contact-grid { margin-top: -40px; } /* Less overlap on mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="hero-section">
+        <img src="assets/images/gallery/pool1.jpeg" id="hero-bg-img" alt="Contact Blue Heaven">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">GET IN TOUCH</span>
+            <h1 class="hero-title">Contact Us</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Plan your perfect escape to Shivpuri</p>
+        </div>
+    </div>
+
+    <div class="contact-grid">
+        <div class="contact-card">
+            <i class="fas fa-map-marker-alt contact-icon"></i>
+            <h3>Our Address</h3>
+            <p>Ripply Adventures, Badrinath Road,<br>Shivpuri, Tehri Garhwal,<br>Rishikesh, Uttarakhand – 249192</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fas fa-phone-alt contact-icon"></i>
+            <h3>Call Us</h3>
+            <a href="tel:+917302263252"><strong>Reception:</strong> +91 73022 63252</a>
+            <a href="tel:+919412972219"><strong>Rampal Bhandari</strong> +91 94129 72219</a>
+	    <a href="tel:+919410563252"><strong>Govind Singh Bhandari</strong> +91 94105 63252 </a>
+
+        </div>
+
+        <div class="contact-card">
+            <i class="fas fa-envelope contact-icon"></i>
+            <h3>Email Us</h3>
+            <a href="mailto:blueheavenresort1983@gmail.com">blueheavenresort1983@gmail.com</a>
+            <p style="margin-top:10px; font-size:0.9rem; color:#888;">Reply within 24 hours</p>
+        </div>
+    </div>
+
+    <section class="map-section">
+        <div class="form-container">
+            <h2 class="form-title">Send a Message</h2>
+            <form onsubmit="event.preventDefault(); sendWhatsAppContact();">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="contact-name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="contact-phone" placeholder="+91 98765 43210" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="contact-msg" placeholder="I am interested in booking..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="background: #003366; color: white; width: 100%; border: none; padding: 15px; font-weight: bold; cursor: pointer; border-radius: 6px;">
+                    SEND MESSAGE
+                </button>
+            </form>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.3456789!2d78.3888!3d30.1333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDA4JzAwLjAiTiA3OMKwMjMnMjAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" 
+            allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <div class="mobile-sticky-bar">
+    <a href="tel:+917302263252" class="sticky-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+    <a href="https://wa.me/917302263252?text=Hi,%20I%20am%20interested%20in%20Blue%20Heaven%20Camp" target="_blank" class="sticky-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+</div>
+
+    <div id="booking-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeBookingModal()">×</button>
+            <div class="modal-header"><h3 id="modal-pkg-name">Booking Inquiry</h3><p id="modal-pkg-price">Best Rates Online</p></div>
+            <div class="modal-body">
+                <div class="form-group"><label>Name</label><input type="text" id="user-name"></div>
+                <div class="form-group"><label>Date</label><input type="date" id="checkin-date"></div>
+                <div class="form-group"><label>Guests</label><select id="guest-count"><option>2</option><option>4</option><option>6+</option></select></div>
+                <button class="btn-whatsapp-confirm" onclick="sendWhatsApp()">Send Inquiry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/analytics.js"></script>
+    
+    <script>
+        function sendWhatsAppContact() {
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const msg = document.getElementById('contact-msg').value;
+            const text = `*New Contact Inquiry*%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Message:* ${msg}`;
+            window.open(`https://wa.me/918954779410?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>

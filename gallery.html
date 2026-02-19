@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Blue Heaven Camp Rishikesh</title>
+    <meta name="theme-color" content="#003366">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { --accent: #FFC107; --dark-bg: #0b0b0b; }
+        body { background: #f4f4f4; margin: 0; }
+
+        /* --- HEADER & HERO --- */
+        .luxury-header {
+            position: absolute; top: 0; left: 0; width: 100%; z-index: 9999;
+            background: transparent; transition: 0.3s;
+        }
+        .luxury-header.scrolled {
+            position: fixed; background-color: #003366 !important;
+            padding: 10px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .hero-section {
+            position: relative; height: 100vh; width: 100%; overflow: hidden;
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            background: #000;
+        }
+        #hero-video-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; opacity: 0.6;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; margin-top: 60px; }
+        .hero-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: white; margin-bottom: 10px; text-shadow: 0 4px 10px rgba(0,0,0,0.8); }
+        .hero-subtitle { color: #FFC107; letter-spacing: 3px; font-weight: bold; text-transform: uppercase; }
+
+        /* --- GALLERY GRID --- */
+        .gallery-container { padding: 60px 20px; max-width: 1400px; margin: 0 auto; }
+        
+        .cat-title {
+            color: #003366; margin: 60px 0 30px; border-left: 5px solid var(--accent);
+            padding-left: 15px; font-family: 'Playfair Display'; font-size: 2rem;
+            display: flex; align-items: center; gap: 10px;
+        }
+
+        .gallery-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px;
+        }
+
+        .gallery-card {
+            background: #000; border-radius: 8px; overflow: hidden; position: relative;
+            aspect-ratio: 4/3; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        
+        .gallery-img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; opacity: 0.95; }
+        .gallery-card:hover .gallery-img { transform: scale(1.1); opacity: 1; }
+
+        .item-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 51, 102, 0.7); display: flex; flex-direction: column;
+            justify-content: center; align-items: center; opacity: 0; transition: 0.3s;
+        }
+        .gallery-card:hover .item-overlay { opacity: 1; }
+        .overlay-text { color: #FFC107; font-weight: bold; text-transform: uppercase; margin-top: 10px; letter-spacing: 1px; text-align: center; }
+
+        /* --- LIGHTBOX --- */
+        #lightbox {
+            display: none; position: fixed; z-index: 10000; left: 0; top: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.95);
+            align-items: center; justify-content: center;
+        }
+        #lightbox img, #lightbox video {
+            max-width: 90vw; max-height: 85vh; border: 2px solid #FFC107; border-radius: 4px; box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .close-lb { position: absolute; top: 30px; right: 40px; color: white; font-size: 3rem; cursor: pointer; z-index: 10001; }
+        .lb-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            color: #FFC107; font-size: 2.5rem; cursor: pointer; padding: 20px; background: rgba(0,0,0,0.3); border-radius: 50%;
+        }
+        .lb-prev { left: 20px; } .lb-next { right: 20px; }
+        .lb-caption {
+            position: absolute; bottom: 30px; color: white; font-family: 'Lato'; letter-spacing: 1px; font-size: 1.2rem;
+        }
+
+        .video-card .item-overlay i { font-size: 3rem; color: white; filter: drop-shadow(0 0 5px rgba(0,0,0,0.5)); }
+        .video-card:hover i { color: #FFC107; transform: scale(1.2); transition: 0.3s; }
+
+        @media(max-width: 768px) { .hero-title { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="hero-section">
+        <video autoplay muted loop playsinline id="hero-video-bg">
+            <source src="assets/images/video/drone view topside angle.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay" style="background: rgba(0,0,0,0.5);"></div>
+        <div class="hero-content" data-aos="fade-up">
+            <span class="hero-subtitle">VISUAL DIARY</span>
+            <h1 class="hero-title">Blue Heaven Gallery</h1>
+            <p style="font-size: 1.2rem; color: #ddd; margin-top: 10px;">Seminars • Celebrations • Adventure</p>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        
+        <h2 class="cat-title"><i class="fas fa-users"></i> Open Air Seminars</h2>
+        <div class="gallery-grid" id="grid-seminar"></div>
+
+        <h2 class="cat-title"><i class="fas fa-glass-cheers"></i> New Year & Parties</h2>
+        <div class="gallery-grid" id="grid-party"></div>
+
+        <h2 class="cat-title"><i class="fas fa-campground"></i> Luxury Stays & Camping</h2>
+        <div class="gallery-grid" id="grid-camping"></div>
+
+        <h2 class="cat-title"><i class="fas fa-water"></i> Pool & Adventure</h2>
+        <div class="gallery-grid" id="grid-adventure"></div>
+
+        <h2 class="cat-title"><i class="fas fa-video"></i> Video Highlights</h2>
+        <div class="gallery-grid" id="grid-video"></div>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <div id="lightbox">
+        <span class="close-lb" onclick="closeLightbox()">&times;</span>
+        <div class="lb-nav lb-prev" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="lb-nav lb-next" onclick="changeSlide(1)">&#10095;</div>
+        <img id="lb-img" src="" style="display:none;">
+        <video id="lb-vid" controls style="display:none;"></video>
+        <div class="lb-caption" id="lb-caption"></div>
+    </div>
+
+    <div class="mobile-sticky-bar">
+    <a href="tel:+917302263252" class="sticky-btn btn-call"><i class="fas fa-phone-alt"></i> Call</a>
+    <a href="https://wa.me/917302263252?text=Hi,%20I%20am%20interested%20in%20Blue%20Heaven%20Camp" target="_blank" class="sticky-btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+</div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/analytics.js"></script>
+
+    <script>
+        AOS.init();
+
+        const galleryData = {
+            // 1. SEMINAR (New Folder Names)
+            seminar: [
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar1.jpeg', title: 'Open Air Session' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar2.jpeg', title: 'Team Activity' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar3.jpeg', title: 'Group Discussion' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar4.jpeg', title: 'Workshop' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar5.jpeg', title: 'Awards Ceremony' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar6.jpeg', title: 'Corporate Event' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar7.jpeg', title: 'Team Building' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar8.jpeg', title: 'Creative Session' },
+                { src: 'assets/images/gallery/new%20year%20celebration/seminar9.jpeg', title: 'Group Photo' }
+            ],
+            // 2. NEW YEAR (Clean Names from Screenshot)
+            party: [
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year.jpeg', title: 'New Year Bash' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year1.jpeg', title: 'DJ Night' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year%202.jpeg', title: 'Celebration Mood' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year3.jpeg', title: 'Party Vibes' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year4.jpeg', title: 'Cake Cutting' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year5.jpeg', title: 'Poolside Fun' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year6.jpeg', title: 'Group Photo' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year7.jpeg', title: 'Friends & Fun' },
+                { src: 'assets/images/gallery/new%20year%20celebration/new%20year8.jpeg', title: 'Night Lights' },
+                // From 'pics' folder
+                { src: 'assets/images/gallery/pics/dj%20music.jpeg', title: 'DJ Floor' },
+                { src: 'assets/images/gallery/pics/dining%20hall.jpg', title: 'Buffet Setup' },
+                { src: 'assets/images/gallery/pics/dinning%20hall2.jpeg', title: 'Dining Area' }
+            ],
+            // 3. CAMPING (From Pics Folder)
+            camping: [
+                { src: 'assets/images/gallery/pics/camp.jpeg', title: 'Riverside Camp' },
+                { src: 'assets/images/gallery/pics/cottage1.jpeg', title: 'Luxury Cottage' },
+                { src: 'assets/images/gallery/pics/cottage2.jpeg', title: 'Premium Stay' },
+                { src: 'assets/images/gallery/pics/inside%20view.jpeg', title: 'Room View' },
+                { src: 'assets/images/gallery/pics/ouside.jpeg', title: 'Garden View' }, 
+                { src: 'assets/images/gallery/pics/outside%20night%20view.jpeg', title: 'Night Ambience' },
+                { src: 'assets/images/gallery/pics/outside%20night%20view%20(2).jpeg', title: 'Evening Lights' },
+                { src: 'assets/images/gallery/pics/washroom.jpeg', title: 'Clean Washroom' },
+                { src: 'assets/images/gallery/pics/washroom2.jpeg', title: 'Modern Bath' }
+            ],
+            // 4. ADVENTURE (From Pics Folder)
+            adventure: [
+                { src: 'assets/images/gallery/pics/rafting-9km.jpg', title: 'Rafting Fun' },
+                { src: 'assets/images/gallery/pics/rafting-12km.jpg', title: 'Rapids Action' },
+                { src: 'assets/images/gallery/pics/swimming%20pool.jpeg', title: 'Pool Dive' },
+                { src: 'assets/images/gallery/pics/swimming%20pool%202.jpeg', title: 'Pool View' },
+                { src: 'assets/images/gallery/pics/swimming%20pool%20daytime%20view.jpeg', title: 'Daytime Pool' },
+                { src: 'assets/images/gallery/pics/outdoor%20activity.jpeg', title: 'Outdoor Games' },
+                { src: 'assets/images/gallery/pics/sunrise.jpeg', title: 'Morning Sunrise' }
+            ],
+            // 5. VIDEOS (Fixed 'Aerial View' Thumbnail)
+            video: [
+                { type: 'vid', src: 'assets/images/gallery/new%20year%20celebration/seminar%20video.mp4', thumb: 'assets/images/gallery/new%20year%20celebration/seminar1.jpeg', title: 'Seminar Highlights' },
+                { type: 'vid', src: 'assets/images/video/dj%20top%20view.mp4', thumb: 'assets/images/gallery/pics/dj%20music.jpeg', title: 'DJ Night Top View' },
+                { type: 'vid', src: 'assets/images/video/drone%20view%20topside%20angle.mp4', thumb: 'assets/images/gallery/pics/swimming%20pool.jpeg', title: 'Resort Drone Tour' },
+                // FIX: Using 'outside night view' image for Aerial View thumbnail
+                { type: 'vid', src: 'assets/images/video/drove%20view%20front%20top.mp4', thumb: 'assets/images/gallery/pics/outside%20night%20view.jpeg', title: 'Aerial View' }
+            ]
+        };
+
+        // RENDER FUNCTION
+        function renderCategory(catName, elementId) {
+            const container = document.getElementById(elementId);
+            if(!container) return;
+
+            galleryData[catName].forEach((item, index) => {
+                const isVideo = item.type === 'vid';
+                const displayImg = isVideo ? item.thumb : item.src;
+                // Fallback image
+                const onError = "this.src='assets/images/gallery/pics/camp.jpeg'";
+
+                const card = document.createElement('div');
+                card.className = `gallery-card ${isVideo ? 'video-card' : ''}`;
+                card.setAttribute('data-aos', 'fade-up');
+                card.onclick = () => openLightBox(catName, index);
+                
+                card.innerHTML = `
+                    <img src="${displayImg}" class="gallery-img" onerror="${onError}" loading="lazy">
+                    <div class="item-overlay">
+                        <i class="fas ${isVideo ? 'fa-play-circle' : 'fa-search-plus'} fa-3x" style="color:#FFC107"></i>
+                        <div class="overlay-text">${item.title}</div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        renderCategory('seminar', 'grid-seminar');
+        renderCategory('party', 'grid-party');
+        renderCategory('camping', 'grid-camping');
+        renderCategory('adventure', 'grid-adventure');
+        renderCategory('video', 'grid-video');
+
+        // LIGHTBOX LOGIC
+        let currentCat = '';
+        let currentIndex = 0;
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lb-img');
+        const lbVid = document.getElementById('lb-vid');
+        const lbCap = document.getElementById('lb-caption');
+
+        function openLightBox(cat, index) {
+            currentCat = cat;
+            currentIndex = index;
+            updateLightBox();
+            lb.style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            lb.style.display = 'none';
+            lbVid.pause();
+        }
+
+        function changeSlide(dir) {
+            currentIndex += dir;
+            const max = galleryData[currentCat].length;
+            if (currentIndex < 0) currentIndex = max - 1;
+            if (currentIndex >= max) currentIndex = 0;
+            updateLightBox();
+        }
+
+        function updateLightBox() {
+            const item = galleryData[currentCat][currentIndex];
+            lbCap.innerText = item.title;
+
+            if (item.type === 'vid') {
+                lbImg.style.display = 'none';
+                lbVid.style.display = 'block';
+                lbVid.src = item.src;
+                lbVid.play();
+            } else {
+                lbVid.style.display = 'none';
+                lbVid.pause();
+                lbImg.style.display = 'block';
+                lbImg.src = item.src;
+            }
+        }
+        
+        lb.addEventListener('click', (e) => {
+            if (e.target === lb) closeLightbox();
+        });
+    </script>
+</body>
+</html>

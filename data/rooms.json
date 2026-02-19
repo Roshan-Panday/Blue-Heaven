@@ -1,0 +1,459 @@
+[
+    {
+        "id": "swiss-tent",
+        "image": "assets\/images\/gallery\/room1.jpeg",
+        "description": "Spacious tents with electricity, fans, and attached washrooms. The perfect balance of comfort and nature.",
+        "title": "Luxury Swiss Tent",
+        "category": "stay",
+        "badge": "Best Seller",
+        "price": 1199,
+        "mrp": 1800,
+        "features": [
+            "Attached Washroom",
+            "Air Cooler",
+            "Pool Access",
+            "Buffet Meals"
+        ],
+        "rating": 5,
+        "reviews": 381,
+        "details": {
+            "overview": "Experience the perfect blend of luxury and nature in our Swiss Tents. Located just 100 meters from the Ganga river, these tents offer a plush king-sized bed, attached western washrooms, and a private sit-out area to enjoy your morning tea with a mountain view.",
+            "highlights": [
+                "Welcome Drink on Arrival",
+                "Evening Bonfire with Music",
+                "Guided Jungle Trek",
+                "Access to Swimming Pool",
+                "All 3 Buffet Meals Included"
+            ],
+            "itinerary": [
+                "12:00 PM: Check-in & Welcome Drink",
+                "01:30 PM: Buffet Lunch (Veg\/Non-Veg)",
+                "04:00 PM: Jungle Trek or River Visit",
+                "07:00 PM: Evening Snacks & Bonfire",
+                "09:00 PM: Buffet Dinner & Music",
+                "08:00 AM: Morning Tea & Breakfast",
+                "10:00 AM: Check-out"
+            ]
+        },
+        "whatsapp_msg": "Hi, I am interested in the *Luxury Swiss Tent* for \u20b91,199\/person."
+    },
+    {
+        "id": "cottage-ac",
+        "image": "assets\/images\/gallery\/room2.jpeg",
+        "description": "Best for families and couples. Concrete rooms with AC, premium bedding, and private sit-out area.",
+        "title": "Premium AC Cottage",
+        "category": "stay",
+        "badge": "Luxury",
+        "price": 1799,
+        "mrp": 3000,
+        "features": [
+            "AC Room",
+            "Private Balcony",
+            "Concrete Room",
+            "Mountain View"
+        ],
+        "rating": 5,
+        "reviews": 188,
+        "details": {
+            "overview": "Our Premium AC Cottages are designed for those who refuse to compromise on comfort. Built with concrete and furnished with modern amenities, these cottages are perfect for families and couples looking for a hotel-like experience in the wild.",
+            "highlights": [
+                "Air Conditioning",
+                "Private Balcony",
+                "Room Service",
+                "Premium Bedding",
+                "Mountain & Garden View"
+            ],
+            "itinerary": [
+                "12:00 PM: Priority Check-in",
+                "01:30 PM: Premium Buffet Lunch",
+                "05:00 PM: High Tea by the Pool",
+                "08:00 PM: Private Bonfire (On Request)",
+                "09:30 PM: Gala Dinner",
+                "10:00 AM: Breakfast & Check-out"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book the *Premium AC Cottage* for \u20b91,799\/person."
+    },
+    {
+        "id": "camp-alpine",
+        "image": "assets\/images\/gallery\/camp1.jpeg",
+        "description": "Sleep on the white sands under the stars. Authentic riverside experience with common hygienic washrooms.",
+        "title": "Luxury Tent",
+        "category": "stay",
+        "badge": "Nature",
+        "price": 999,
+        "mrp": 1500,
+        "features": [
+            "River Bank Location",
+            "Common Washroom",
+            "Sand Floor",
+            "Bonfire"
+        ],
+        "rating": 5,
+        "reviews": 560,
+        "details": {
+            "overview": "For the true nature lover. These alpine tents are pitched directly on the white sands of the Ganga river bank. No electricity inside tents, no concrete\u2014just you, the river, and the stars. Solar lights and common hygienic washrooms are provided.",
+            "highlights": [
+                "Direct Beach Access",
+                "Star Gazing Experience",
+                "Beach Volleyball",
+                "Budget Friendly",
+                "Bonfire on Sand"
+            ],
+            "itinerary": [
+                "12:00 PM: Camp Check-in",
+                "02:00 PM: Lunch by the River",
+                "04:00 PM: Beach Volleyball & Games",
+                "07:00 PM: Bonfire on Sand",
+                "09:00 PM: Dinner under Stars"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book the *Riverside Alpine Camp* for \u20b9999\/person."
+    },
+    {
+        "id": "raft-9km",
+        "image": "assets\/images\/gallery\/rafting-9km.jpg",
+        "description": "The easiest stretch in Rishikesh. Perfect for families, kids (14+), and elders. Enjoy small waves and body surfing.",
+        "title": "Rafting: Brahmpuri (9KM)",
+        "category": "rafting",
+        "badge": "Family Friendly",
+        "price": 599,
+        "mrp": 800,
+        "features": [
+            "Grade II Rapids",
+            "Safe for Kids",
+            "1.5 Hours",
+            "Mild Waves"
+        ],
+        "rating": 5,
+        "reviews": 787,
+        "details": {
+            "overview": "Starting from Brahmpuri, this 9KM stretch is the mildest and safest rafting option available. It features Grade I and II rapids which are fun but not scary. It is ideal for families with children (14 years+) or senior citizens who want to experience the Ganga without the adrenaline shock.",
+            "highlights": [
+                "Mild Grade II Rapids",
+                "Body Surfing",
+                "Cliff Jumping (Optional)",
+                "Ideal for Non-Swimmers"
+            ],
+            "itinerary": [
+                "09:00 AM: Report at Office",
+                "09:30 AM: Drive to Brahmpuri",
+                "10:00 AM: Safety Briefing",
+                "10:30 AM: Rafting Begins",
+                "12:00 PM: Finish at Nim Beach"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book *9KM Brahmpuri Rafting* for \u20b9599."
+    },
+    {
+        "id": "raft-12km",
+        "image": "assets\/images\/gallery\/rafting-12km.jpg",
+        "description": "A step up from the easiest run. Includes the famous 'Three Blind Mice' rapid and body surfing.",
+        "title": "Rafting: Clubhouse (12KM)",
+        "category": "rafting",
+        "badge": "Beginner Plus",
+        "price": 799,
+        "mrp": 1200,
+        "features": [
+            "Grade III Rapids",
+            "Phool Chatti",
+            "2 Hours",
+            "Body Surfing"
+        ],
+        "rating": 5,
+        "reviews": 176,
+        "details": {
+            "overview": "The Clubhouse stretch adds a bit more thrill than Brahmpuri. You will encounter Grade II+ rapids like 'Three Blind Mice' and 'Crossfire'. It's a perfect middle ground for beginners who want a little splash but nothing too extreme.",
+            "highlights": [
+                "Grade II & III Rapids",
+                "Phool Chatti Rapid",
+                "Body Surfing",
+                "Scenic River View"
+            ],
+            "itinerary": [
+                "10:00 AM: Report at Office",
+                "10:30 AM: Transport to Clubhouse",
+                "11:00 AM: Gear Up & Briefing",
+                "11:30 AM: Rafting Starts",
+                "01:30 PM: Finish at Nim Beach"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book *12KM Clubhouse Rafting* for \u20b9799."
+    },
+    {
+        "id": "raft-16km",
+        "image": "assets\/images\/gallery\/rafting-16km.jpg",
+        "description": "The classic Rishikesh rafting experience. Covers the biggest Grade III rapids like Roller Coaster and Golf Course.",
+        "title": "Rafting: Shivpuri (16KM)",
+        "category": "rafting",
+        "badge": "Most Popular",
+        "price": 999,
+        "mrp": 1500,
+        "features": [
+            "Roller Coaster",
+            "Golf Course",
+            "Cliff Jumping",
+            "Body Surfing"
+        ],
+        "rating": 5,
+        "reviews": 406,
+        "details": {
+            "overview": "This is our #1 Best Selling package. The Shivpuri stretch offers the perfect balance of thrill and fun. You will hit major Grade III rapids including the famous 'Roller Coaster' and 'Golf Course'. We also stop at a cliff jumping point where you can leap into the Ganga.",
+            "highlights": [
+                "Roller Coaster Rapid",
+                "Golf Course Rapid",
+                "Cliff Jumping",
+                "Body Surfing",
+                "Safety Kayaker"
+            ],
+            "itinerary": [
+                "09:00 AM: Report at Office",
+                "09:30 AM: Drive to Shivpuri",
+                "10:00 AM: Safety Instructions",
+                "10:30 AM: Rafting Action Begins",
+                "01:00 PM: End at Nim Beach"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book *16KM Shivpuri Rafting* for \u20b9999."
+    },
+    {
+        "id": "raft-26km",
+        "image": "assets\/images\/gallery\/rafting-24km.jpg",
+        "description": "Long duration adventure. Includes a Maggi\/Tea break point on the river and over 10 major rapids.",
+        "title": "Rafting: Marine Drive (26KM)",
+        "category": "rafting",
+        "badge": "Thrill Seeker",
+        "price": 1499,
+        "mrp": 2000,
+        "features": [
+            "10+ Major Rapids",
+            "Snack Break",
+            "3 Hours",
+            "Cliff Jump"
+        ],
+        "rating": 5,
+        "reviews": 334,
+        "details": {
+            "overview": "For those who want more time on the water. Starting from Marine Drive, this 26KM stretch takes about 3-4 hours. You get to experience the scenic beauty of the valley before hitting the intense rapids of Shivpuri. Includes a stop at the famous Maggi Point.",
+            "highlights": [
+                "26KM Long Run",
+                "Maggi Point Stop",
+                "10+ Rapids",
+                "Scenic Float",
+                "Cliff Jump"
+            ],
+            "itinerary": [
+                "08:00 AM: Report at Office",
+                "08:45 AM: Drive to Marine Drive",
+                "09:30 AM: Safety Briefing",
+                "10:00 AM: Rafting Begins",
+                "01:30 PM: Finish at Nim Beach"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book *26KM Marine Drive Rafting* for \u20b91,499."
+    },
+    {
+        "id": "raft-36km",
+        "image": "assets\/images\/gallery\/rafting-36km.jpg",
+        "description": "Only for the physically fit and experienced rafters. Hits 'The Wall' - a massive Grade IV rapid that flips boats.",
+        "title": "Rafting: Kaudiyala (36KM)",
+        "category": "rafting",
+        "badge": "Extreme",
+        "price": 2499,
+        "mrp": 3500,
+        "features": [
+            "Grade IV Rapids",
+            "The Wall",
+            "High Stamina",
+            "Experienced Only"
+        ],
+        "rating": 5,
+        "reviews": 769,
+        "details": {
+            "overview": "This is the 'Big Daddy' of rafting in Rishikesh. Starting from Kaudiyala, this stretch includes 'The Wall', a Grade IV rapid that requires precise teamwork to conquer. This trip is physically demanding and is recommended only for those who are fit and have rafted before.",
+            "highlights": [
+                "Grade IV Rapid (The Wall)",
+                "Full Day Adventure",
+                "Lunch on River Bank",
+                "Maximum Adrenaline"
+            ],
+            "itinerary": [
+                "07:30 AM: Report at Office",
+                "08:30 AM: Reach Kaudiyala",
+                "09:00 AM: Briefing & Start",
+                "01:00 PM: Lunch Break",
+                "03:30 PM: Finish at Nim Beach"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to challenge the *36KM Kaudiyala Rafting* for \u20b92,499."
+    },
+    {
+        "id": "raft-70km",
+        "image": "assets\/images\/gallery\/rafting-70km.jpg",
+        "description": "A full 2-day expedition starting from the Confluence at Devprayag. Includes overnight camping on a remote beach.",
+        "title": "Expedition: Devprayag (70KM)",
+        "category": "rafting",
+        "badge": "2 Days Trip",
+        "price": 7999,
+        "mrp": 10000,
+        "features": [
+            "Overnight Camping",
+            "All Meals",
+            "Full River Run",
+            "Bonfire"
+        ],
+        "rating": 5,
+        "reviews": 690,
+        "details": {
+            "overview": "A once-in-a-lifetime expedition. We start from Devprayag, where the Alaknanda and Bhagirathi rivers meet to form the Ganga. You will raft 35KM on Day 1, camp on a secluded beach with no road access, and raft the remaining 35KM on Day 2.",
+            "highlights": [
+                "Start at Devprayag Confluence",
+                "Remote Beach Camping",
+                "All Meals Cooked Fresh",
+                "Complete Digital Detox"
+            ],
+            "itinerary": [
+                "Day 1: Drive to Devprayag, Raft 35KM, Camp Night",
+                "Day 2: Breakfast, Raft 35KM to Rishikesh, Lunch"
+            ]
+        },
+        "whatsapp_msg": "Hi, I am interested in the *70KM Devprayag Expedition* for \u20b97,999."
+    },
+    {
+        "id": "bungee-83m",
+        "image": "assets\/images\/gallery\/bungee.jpg",
+        "description": "83 Meters of pure gravity. Operated by experts with a 100% safety record. Includes 'Dare to Jump' certificate.",
+        "title": "Bungee Jump (83 Mtrs)",
+        "category": "adventure",
+        "badge": "Bucket List",
+        "price": 3550,
+        "mrp": 4000,
+        "features": [
+            "India's Highest",
+            "NZ Safety Standards",
+            "Daredevil Certificate",
+            "Video Available"
+        ],
+        "rating": 5,
+        "reviews": 799,
+        "details": {
+            "overview": "Challenge your fears at India's highest bungee platform (83 Meters). Designed by David Allardice of New Zealand, this jump follows the strictest international safety standards. The feeling of free-falling for 3 seconds is indescribable.",
+            "highlights": [
+                "83 Meter Drop",
+                "Certificate of Completion",
+                "100% Safety Record",
+                "Scenic Valley View"
+            ],
+            "itinerary": [
+                "Arrival & Registration",
+                "Weight Check & Briefing",
+                "Walk to Jump Zone",
+                "The Jump!",
+                "Trek Up & Collect Certificate"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book the *83M Bungee Jump* for \u20b93,550."
+    },
+    {
+        "id": "flying-fox",
+        "image": "assets\/images\/gallery\/flying-fox.jpg",
+        "description": "Fly across the valley at 140 kmph on Asia's longest zipline. Can be done solo or in tandem (3 people).",
+        "title": "Flying Fox (1 KM Long)",
+        "category": "adventure",
+        "badge": "Asia's Longest",
+        "price": 1800,
+        "mrp": 2500,
+        "features": [
+            "Speed: 140 Kmph",
+            "Tandem Available",
+            "River View",
+            "Superman Style"
+        ],
+        "rating": 5,
+        "reviews": 792,
+        "details": {
+            "overview": "Feel like a bird as you zip across the valley at speeds of up to 140 Kmph. This is Asia's longest flying fox (1 KM long). You are harnessed in a superman position, giving you a clear view of the river 120 meters below.",
+            "highlights": [
+                "1 KM Length",
+                "140 Kmph Speed",
+                "Superman Harness",
+                "Tandem Option"
+            ],
+            "itinerary": [
+                "Gear Up & Harness Check",
+                "Launch from Top Platform",
+                "Zip Across Valley",
+                "Winched Back Up"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to book the *Flying Fox* for \u20b91,800."
+    },
+    {
+        "id": "rental-scooty",
+        "image": "assets\/images\/gallery\/scooty.jpg",
+        "description": "Explore Rishikesh cafes, ashrams, and waterfalls at your own pace. Valid Driving License required.",
+        "title": "Scooty Rental (Activa)",
+        "category": "rental",
+        "badge": "City Travel",
+        "price": 501,
+        "mrp": 800,
+        "features": [
+            "Automatic",
+            "Helmet Included",
+            "Self Start",
+            "45 Kmpl"
+        ],
+        "rating": 5,
+        "reviews": 614,
+        "details": {
+            "overview": "Avoid the traffic jams and expensive taxis. Renting a scooty is the best way to explore Rishikesh. Visit the Beatles Ashram, Parmarth Niketan, or drive up to Kunjapuri Temple for sunrise.",
+            "highlights": [
+                "Honda Activa 6G",
+                "2 Helmets Included",
+                "Unlimited KMs",
+                "24 Hour Rental"
+            ],
+            "itinerary": [
+                "Submit ID & License",
+                "Pay Security Deposit",
+                "Bike Check",
+                "Explore Rishikesh!"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to rent a *Scooty* for \u20b9500\/day."
+    },
+    {
+        "id": "rental-xpulse",
+        "image": "assets\/images\/gallery\/bike.jpg",
+        "description": "The ultimate machine for Neelkanth and mountain roads. Powerful 200cc engine for steep climbs.",
+        "title": "Hero X-Pulse 200",
+        "category": "rental",
+        "badge": "Off-Road",
+        "price": 1001,
+        "mrp": 1500,
+        "features": [
+            "200cc Engine",
+            "Mountain Ready",
+            "High Ground Clearance",
+            "Adventure Bike"
+        ],
+        "rating": 5,
+        "reviews": 702,
+        "details": {
+            "overview": "If you plan to ride to Neelkanth Mahadev or Devprayag, a scooty won't cut it. You need the power and suspension of the Hero X-Pulse. This off-road bike handles the mountain curves and potholes with ease.",
+            "highlights": [
+                "200cc Adventure Bike",
+                "High Suspension",
+                "Perfect for Mountains",
+                "Phone Mount Included"
+            ],
+            "itinerary": [
+                "Submit ID & License",
+                "Pay Security Deposit",
+                "Bike Check",
+                "Ride the Mountains!"
+            ]
+        },
+        "whatsapp_msg": "Hi, I want to rent the *Hero X-Pulse* for \u20b91,000\/day."
+    }
+]
